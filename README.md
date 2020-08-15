@@ -1,6 +1,8 @@
 # Phoenix React with App
 
+Special Thanks to
 
+- [Phoenix + Reactでチャットアプリを作ろう（Intro）](https://medium.com/@1zo/phoenix-react%E3%81%AE%E3%83%81%E3%83%A3%E3%83%83%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86-intro-7dddee01850a)
 
 ```
 gkz@local ~/phoenix-react-app $ . sh/new.sh
