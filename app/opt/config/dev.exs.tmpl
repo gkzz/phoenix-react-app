@@ -2,7 +2,7 @@ use Mix.Config
 
 # Configure your database
 config :thanks, Thanks.Repo,
-  adapter: Ecto.Adapters.Postgres,
+#  adapter: Ecto.Adapters.Postgres,
   username: System.get_env("PHX_DB_USERNAME"),
   password: System.get_env("PHX_DB_PASSWORD"),
   database: System.get_env("PHX_DB"),
