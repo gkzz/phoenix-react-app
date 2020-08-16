@@ -1,24 +1,15 @@
-import React from 'react'
-import { render } from '@testing-library/react';
-import App from './App';
+import React from 'react';
+import {render, screen} from '@testing-library/react'
+import App from './App'
+import {waitForElement} from '@testing-library/dom'
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/Thanks/i);
-  expect(linkElement).toBeInTheDocument();
-});
 
 
 describe('App', () => {
   it('renders Header', async () => {
     const {getByText} = render(<App/>)
+    await waitForElement(() => screen.getByText(/Thanks/i))
     const headerText = getByText(/Thanks/i)
     expect(headerText).toBeInTheDocument()
-  })
-
-  it('renders Home page by default', async() => {
-    const {getByText} = render(<App/>)
-    const homePageText = getByText(/My Chat Groups/i)
-    expect(homePageText).toBeInTheDocument()
   })
 })
