@@ -43,9 +43,11 @@ root@app:/opt/api#
 ```
 
 ```
-root@app:/opt/api# curl -H "Content-Type: application/json" -X POST -d '{"group": {"name": "first group"}}' http://localhost:4000/api/groups
+root@app:/opt/api# curl -H "Content-Type: application/json" \
+  -X POST -d '{"group": {"name": "first group"}}' http://localhost:4000/api/groups
 
-root@app:/opt/api# curl -H "Content-Type: application/json" -X POST -d '{"group": {"name": "second group"}}' http://localhost:4000/api/groups
+root@app:/opt/api# curl -H "Content-Type: application/json" \
+  -X POST -d '{"group": {"name": "second group"}}' http://localhost:4000/api/groups
 ```
 
 ```
