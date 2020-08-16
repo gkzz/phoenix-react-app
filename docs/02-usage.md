@@ -40,7 +40,7 @@ Finished in 0.2 seconds
 
 Randomized with seed 424541
 root@app:/opt/api# 
-``
+```
 
 ```
 root@app:/opt/api# curl -H "Content-Type: application/json" -X POST -d '{"group": {"name": "first group"}}' http://localhost:4000/api/groups
