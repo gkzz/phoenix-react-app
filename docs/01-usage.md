@@ -79,3 +79,40 @@ Name              Command              State            Ports
 app    /bin/bash                       Up      0.0.0.0:4000->4000/tcp 
 db     docker-entrypoint.sh postgres   Up      0.0.0.0:15432->5432/tcp 
 ```
+
+
+## Try to connect db from app
+```
+$ docker-compose exec app bash
+root@app:/opt# psql -U phx -d thanks_dev -h db -p 5432
+Password for user phx: 
+psql (11.7 (Debian 11.7-0+deb10u1), server 12.4 (Debian 12.4-1.pgdg100+1))
+WARNING: psql major version 11, server major version 12.
+         Some psql features might not work.
+Type "help" for help.
+
+thanks_dev=> \l
+                                 List of databases
+    Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges   
+------------+----------+----------+------------+------------+-----------------------
+ postgres   | postgres | UTF8     | en_US.utf8 | en_US.utf8 | 
+ template0  | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+            |          |          |            |            | postgres=CTc/postgres
+ template1  | postgres | UTF8     | en_US.utf8 | en_US.utf8 | =c/postgres          +
+            |          |          |            |            | postgres=CTc/postgres
+ thanks_dev | phx      | UTF8     | en_US.utf8 | en_US.utf8 | =Tc/phx              +
+            |          |          |            |            | phx=CTc/phx
+(4 rows)
+```
+
+```
+root@app:/opt/api# MIX_ENV=test && mix test
+==> connection
+Compiling 1 file (.ex)
+Generated connection app
+
+Finished in 0.03 seconds
+2 tests, 0 failures
+
+Randomized with seed 312970
+```
