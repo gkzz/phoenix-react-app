@@ -28,6 +28,8 @@ On Editing
 
 - [01-usage.md](docs/01-usage.md)
 
+- [02-usage.md](docs/02-usage.md)
+
 ## Notes
 
 - Before executing `. sh/new.sh`
